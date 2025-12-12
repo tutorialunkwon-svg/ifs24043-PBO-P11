@@ -14,9 +14,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(authInterceptor)
-                .addPathPatterns("/api/**") // Terapkan ke semua endpoint /api
-                .excludePathPatterns("/api/auth/**") // Kecuali endpoint auth
-                .excludePathPatterns("/api/public/**"); // Dan endpoint public
+        // Authentication is now handled by JwtAuthenticationFilter via Spring Security.
+        // Do not register the old AuthInterceptor for API endpoints to avoid duplicate checks.
     }
 }

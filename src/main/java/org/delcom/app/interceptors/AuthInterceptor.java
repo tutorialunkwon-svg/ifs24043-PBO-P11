@@ -89,7 +89,8 @@ public class AuthInterceptor implements HandlerInterceptor {
         // String method = request.getMethod();
 
         // Endpoint public yang tidak perlu auth
-        return path.startsWith("/api/auth") || path.equals("/error");
+        // Public endpoints for development/testing: auth pages and temperature API only
+        return path.startsWith("/api/auth") || path.startsWith("/api/temperature") || path.equals("/error");
     }
 
     private void sendErrorResponse(HttpServletResponse response, int status, String message) throws Exception {

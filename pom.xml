@@ -145,6 +145,13 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- Dependency for H2 Database -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
 		<!-- Dependency for JWT -->
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
